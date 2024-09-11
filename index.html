@@ -367,8 +367,8 @@
     
     function updateTotal(){
         total += 1;
-        var tot = document.getElementById("total");
-        tot.innerHTML = total;
+        var cor = document.getElementById("wrong");
+        cor.innerHTML = total - correct;
         
         if(total===numOfProbs){
             alert("You've reached the end of the problem list. The problems will be shown again in different order if you continue.")
