@@ -127,14 +127,16 @@
             border: solid 2px #FFA500;
             border-radius: 10px;
             padding: 20px;
-            display: none; /* 初始隱藏 */
-            justify-content: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             text-align: left;
             font-size: 18px;
             margin-bottom: 10px;
         }
+
         .next-button {
-            margin-left: auto;
+            margin-left: 10px;
             padding: 10px 10px;
             font-size: 18px;
             background-color: white;
@@ -375,18 +377,18 @@
         wng.innerHTML = wrong;
     }
     
-    function nextProb(){
-        
-        
+    function nextProb() {
+        document.querySelector('.card-answer').style.display = 'none';
+
         updateImage();
-        var getAns=document.getElementById("answer");
-        getAns.value="";
-        var showAns=document.getElementById("showAnswer"); 
-        showAns.innerHTML="";
-        var des=document.getElementById("description");
-        des.value="";
-        var exp=document.getElementById("showExplanation");
-        exp.innerHTML="";
+        var getAns = document.getElementById("answer");
+        getAns.value = "";
+        var showAns = document.getElementById("showAnswer");
+        showAns.innerHTML = "";
+        var des = document.getElementById("description");
+        des.value = "";
+        var exp = document.getElementById("showExplanation");
+        exp.innerHTML = "";
         resetTime();
         countdown();
     }
